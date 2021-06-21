@@ -14,8 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('blog.urls')),
+    # the URL resolver will ignore the domain name (http://127.0.0.1:8000/) and match with whatver follows
+    # in this case since we will match with an empty string 
+    # since http://127.0.0.1:8000/ is our home page URL this will match  
+    # and everything that comes in with this address will be routed to blog.urls for furhter instruction
 ]

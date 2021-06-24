@@ -8,15 +8,13 @@
             <h1>Welcome to my wonderful blog!</h1>
         </header>
         
-        <article>
-            <time>published: </time>
-            <h2><a href="">First Post</a></h2>
-            <p>Once there was once a small boy</p>
-        </article>
+        {% for post in posts %}
+            <article>
+                <time>pusblished: {{post.published_date}}</time>
+                <h2><a href="">{{post.title}}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
 
-        <article>
-            <h2>Second Post</h2>
-            <p>The boy had a big sword</p>
-        </article>
     </body>
 </html>

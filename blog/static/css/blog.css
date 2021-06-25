@@ -53,9 +53,7 @@ body {
     margin-bottom: 70px;
 }
 
-.post h2 a {
-    color: #001f3f;
-}
+.post h2 a 
 .post h2 a:visited {
     color: #C25100;
 }
